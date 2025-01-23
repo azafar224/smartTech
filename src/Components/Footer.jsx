@@ -183,7 +183,7 @@ const Navigation = () => {
     <div className="bg-gray-900 text-white px-4 py-8 md:p-8 lg:p-10">
       <div className="container mx-auto max-w-7xl">
         <div className="flex justify-center md:justify-start mb-8 lg:mb-10">
-          <Link to="/" className="text-3xl md:text-4xl font-bold text-blue-500">T-BUCKS</Link>
+          <Link to="/" className="text-3xl md:text-4xl font-bold text-blue-500">SMART TECH</Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -208,7 +208,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="space-y-6 pl-10">
+          <div className="space-y-6 lg:pl-10">
             <h3 className="text-xl md:text-2xl font-semibold mb-5">Links</h3>
             <ul className="space-y-3">
               <li><Link to="/" className="text-gray-400 text-base hover:text-white">Home</Link></li>
