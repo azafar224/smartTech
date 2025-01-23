@@ -1,14 +1,15 @@
-import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ServiceCard from "../Components/ServiceCard";
 import JobCard from "../Components/JobCard";
 
 const Home = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
 
   // Function to handle button click for navigation
   const handleButtonClick = (path) => {
-    navigate(path); // Navigate to the specified path
+    navigate(path);
   };
 
   const services = [
@@ -86,7 +87,6 @@ const Home = () => {
         "Automate processes and ensure smooth application deployments.",
     },
   ];
-
   const sliderRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -120,6 +120,25 @@ const Home = () => {
     }
   };
 
+  const [isPaused, setIsPaused] = useState(false);
+  const testimonialsRef = useRef(null);
+
+  useEffect(() => {
+    let animationFrame;
+    const container = testimonialsRef.current;
+
+    const animateScroll = () => {
+      if (!isPaused && container) {
+        container.scrollLeft += 1;
+      }
+      animationFrame = requestAnimationFrame(animateScroll);
+    };
+
+    animationFrame = requestAnimationFrame(animateScroll);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isPaused]);
+
   return (
     <section>
       <div
@@ -132,7 +151,7 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        <div className=" relative z-10 flex flex-col h-full justify-center items-start text-left text-white py-30 px-8 sm:px-10 lg:px-20 w-full sm:w-[75%] lg:w-[50%]">
+        <div className="  relative z-10 mt-6 flex flex-col h-full justify-center items-start text-left text-white py-30 px-8 sm:px-10 lg:px-20 w-full sm:w-[75%] lg:w-[50%]">
           <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold leading-tight mb-0">
             LET'S DIGITALIZE YOUR{" "}
             <span className="text-blue-400">BUSINESS</span>
@@ -162,7 +181,7 @@ const Home = () => {
       {/* Statistics Section */}
       <div className="w-full bg-white">
         {/* Statistics Container */}
-        <div className="relative flex bg-white justify-center items-center w-[90%] sm:w-[75%] lg:w-[50%] h-auto sm:h-[80%] lg:h-auto mx-auto gap-y-6 py-6  px-4 sm:px-2 rounded-3xl shadow-2xl mt-[-6%] mb-4 z-20">
+        <div className="relative flex bg-white justify-center items-center w-[90%] sm:w-[75%] lg:w-[50%] h-auto sm:h-[80%] lg:h-auto mx-auto gap-y-6 py-6  px-4 sm:px-2 rounded-3xl shadow-2xl mt-[-6%] mb-8 lg:mb-2 md:mb-12 z-20">
           <div className="flex flex-wrap justify-evenly gap-y-6 sm:gap-y-0 w-full">
             <div className="flex flex-col items-center space-y-2 hover:scale-105 transform transition duration-300 ease-in-out w-[40%] sm:w-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-600">
@@ -228,43 +247,43 @@ const Home = () => {
 
           {/* Left Section: Technologies Grid */}
           <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 px-6 mb-9  lg:mb-0">
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-0 px-9 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fab fa-android text-green-500 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                Android Service
-              </span>
-            </div>
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fab fa-android text-green-500 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                Ionic
-              </span>
-            </div>
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fab fa-js-square text-yellow-500 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                JavaScript
-              </span>
-            </div>
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fab fa-react text-blue-400 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                React
-              </span>
-            </div>
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fas fa-database text-purple-500 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                Hive
-              </span>
-            </div>
-            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg">
-              <i className="fas fa-tools text-gray-500 text-3xl mb-2 transition-all duration-300 ease-in-out"></i>
-              <span className="text-lg font-medium text-gray-700 hover:text-white transition-all duration-300 ease-in-out">
-                Chopper
-              </span>
-            </div>
-          </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-0 px-9 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-globe text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      Website Development
+    </span>
+  </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-mobile-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      Mobile App Development
+    </span>
+  </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-chart-line text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      Data Analysis 
+    </span>
+  </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-shield-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      Cyber
+    </span>
+  </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-shopping-cart text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      E-commerce
+    </span>
+  </div>
+  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+    <i className="fas fa-brain text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+      Artificial Intellegence Solution
+    </span>
+  </div>
+</div>
         </div>
       </div>
 
@@ -281,47 +300,88 @@ const Home = () => {
               the next level.
             </p>
           </div>
+<div className="relative">
+  {/* Left Arrow Button */}
+  <button
+    onClick={() => {
+      const slider = sliderRef.current;
+      if (slider) {
+        const cardWidth = 300;
+        const currentScroll = slider.scrollLeft;
+        const totalScroll = slider.scrollWidth;
+        
+        slider.scrollTo({
+          left: currentScroll - cardWidth,
+          behavior: 'smooth'
+        });
 
-          {/* Services Slider */}
-          <div className="relative">
-            {/* Left Arrow Button */}
-            <button
-              onClick={() => scrollSlider("left")}
-              className="arrow-button left-arrow"
-            >
-              &lt;
-            </button>
+        // If we're at the start, jump to the second set without animation
+        if (currentScroll < cardWidth) {
+          requestAnimationFrame(() => {
+            slider.style.scrollBehavior = 'auto';
+            slider.scrollLeft = totalScroll - (cardWidth * services.length * 2);
+            slider.style.scrollBehavior = 'smooth';
+          });
+        }
+      }
+    }}
+    className="arrow-button left-arrow"
+  >
+    &lt;
+  </button>
 
-            {/* Scrollable Services Container */}
-            <div
-              className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden "
-              ref={sliderRef}
-              style={{
-                msOverflowStyle: "none",
-                scrollbarWidth: "none", // For Firefox
-              }}
-            >
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  service={service}
-                  className="flex-shrink-0"
-                  style={{
-                    width: "90%", // Mobile - 1 card per row
-                    maxWidth: "300px", // Ensure consistent card size
-                  }}
-                />
-              ))}
-            </div>
+  {/* Scrollable Services Container */}
+  <div
+    className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
+    ref={sliderRef}
+    style={{
+      msOverflowStyle: "none",
+      scrollbarWidth: "none",
+    }}
+  >
+    {/* Quintuple the items for smoother infinite scroll */}
+    {[...services, ...services, ...services, ...services, ...services].map((service, index) => (
+      <ServiceCard
+        key={`${index}`}
+        service={service}
+        className="flex-shrink-0"
+        style={{
+          width: "90%",
+          maxWidth: "300px",
+        }}
+      />
+    ))}
+  </div>
 
-            {/* Right Arrow Button */}
-            <button
-              onClick={() => scrollSlider("right")}
-              className="arrow-button right-arrow"
-            >
-              &gt;
-            </button>
-          </div>
+  {/* Right Arrow Button */}
+  <button
+    onClick={() => {
+      const slider = sliderRef.current;
+      if (slider) {
+        const cardWidth = 300;
+        const currentScroll = slider.scrollLeft;
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        
+        slider.scrollTo({
+          left: currentScroll + cardWidth,
+          behavior: 'smooth'
+        });
+
+        // If we're near the end, jump to the second set without animation
+        if (currentScroll > maxScroll - cardWidth * 2) {
+          requestAnimationFrame(() => {
+            slider.style.scrollBehavior = 'auto';
+            slider.scrollLeft = cardWidth * services.length;
+            slider.style.scrollBehavior = 'smooth';
+          });
+        }
+      }
+    }}
+    className="arrow-button right-arrow"
+  >
+    &gt;
+  </button>
+</div>
         </div>
       </div>
 
@@ -522,8 +582,23 @@ const Home = () => {
 
         {/* Testimonial Cards Grid */}
 
-        <div className="testimonial-scroll-container overflow-hidden relative">
-          <div className="scroll-animation flex space-x-12">
+        <div
+  className="testimonial-scroll-container overflow-hidden relative w-full"
+  ref={testimonialsRef}
+  onMouseEnter={() => setIsPaused(true)} // Stops on hover
+  onMouseLeave={() => setIsPaused(false)} // Resumes on mouse leave
+>
+  <div
+    className={`scroll-animation flex space-x-12 ${
+      isPaused ? "" : "animate-scroll"
+    }`}
+    onAnimationIteration={() => testimonialsRef.current.scrollTo(0, 0)} // Restart when animation iteration ends
+    style={{
+      animationDuration: "280s", // Slow transition speed
+    }} 
+ >
+    {[...Array(3)].map((_, index) => (
+      <React.Fragment key={index}>
             {/* Testimonial 1 */}
             <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
               <div className="flex justify-center mb-4">
@@ -656,6 +731,8 @@ const Home = () => {
               </h3>
               <p className="text-gray-600">VP, Global Corp</p>
             </div>
+            </React.Fragment>
+    ))}
           </div>
         </div>
       </div>
