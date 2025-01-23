@@ -21,48 +21,21 @@ const Portfolio = () => {
       </div>
 
       {/* Scalable Solutions Section */}
-      <div className="container mx-auto px-6 md:px-12 py-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Scalable Solutions for Tomorrow
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="space-y-4">
-            <div className="flex items-start space-x-4">
-              <div className="w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
-              <div>
-                <h3 className="font-semibold text-lg">
-                  User-Centered Approach
-                </h3>
-                <p className="text-gray-700">
-                  Your users are at the heart of everything we build. Proven
-                  success across industries.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
-              <div>
-                <h3 className="font-semibold text-lg">
-                  Proven Success Across Industries
-                </h3>
-                <p className="text-gray-700">
-                  From startups to enterprises, we’ve helped clients in diverse
-                  industries achieve digital success.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
-              <div>
-                <h3 className="font-semibold text-lg">End-to-End Expertise</h3>
-                <p className="text-gray-700">
-                  From concept to deployment, we manage every step of your
-                  digital journey.
-                </p>
-              </div>
-            </div>
+      <div className="container mx-auto px-6 md:px-12 py-12 bg-black">
+        <div>
+          <h2 className="text-6xl font-bold text-gray-900 text-white mb-8 text-center">
+            Our Approach
+          </h2>
+          <div className="flex justify-center items-center mb-16">
+            <img
+              src="/portfolio1.svg"
+              alt="Our approach illustration"
+              className="w-full max-w-3xl rounded-lg" // Increased max-width and centered using flex container
+            />
           </div>
         </div>
+
+
 
         <div className="relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
