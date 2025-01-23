@@ -57,7 +57,7 @@ function Contact() {
     <div>
     {/* Contact Us Section */}
     <div
-  className="bg-blue-900 text-white py-16 text-center bg-cover bg-center mt-12"
+  className="bg-blue-900 text-white py-28 text-center bg-cover bg-center"
   style={{ backgroundImage: "url('contactbg.jpg')" }}
 >
   <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
