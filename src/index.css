@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Arrow Buttons General Style */
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0366d6; /* Dark blue */
+    color: white;
+    padding: 12px; /* Ensures button is large enough */
+    width: 48px; /* Fixed width */
+    height: 48px; /* Fixed height */
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Ensures the button is above other content */
+}
+
+/* Position Left Arrow */
+.arrow-button.left-arrow {
+    left: 1%; /* Align with left edge */
+}
+
+/* Position Right Arrow */
+.arrow-button.right-arrow {
+    right: 1%; /* Align with right edge */
+}
+/* styles.css or styled component */
+.service-card {
+    flex: 0 0 100%; /* Full width on mobile */
+  }
+  
+  @media (min-width: 640px) {
+    .service-card {
+      flex: 0 0 45%; /* Two cards per view on tablets */
+    }
+  }
+  
+/* Assuming you are using a separate CSS file or <style> block */
+@media (min-width: 1024px) {
+    .service-card {
+      flex: 0 0 30%; /* Three cards per row on larger screens */
+      margin-right: 0; /* Remove spacing between the cards */
+    }
+  
+    .service-card:last-child {
+      margin-right: 0; /* Ensure the last card doesn't have right margin if any */
+    }
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+.testimonial-scroll-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .scroll-animation {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
