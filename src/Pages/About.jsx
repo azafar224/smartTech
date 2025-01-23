@@ -8,8 +8,8 @@ const About = () => {
         className="relative bg-cover bg-center h-[300px] md:h-[400px] flex items-center justify-center text-center group"
         style={{ backgroundImage: `url('new.png')` }}
       >
-        <div className="bg-black bg-opacity-50 text-white px-6 sm:px-8 py-8 sm:py-10 rounded-md transform group-hover:scale-105 transition duration-300 ease-in-out">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 group-hover:text-blue-400 transition duration-300 ease-in-out">
+        <div className="bg-black bg-opacity-50 text-white px-6 sm:px-8 py-8 sm:py-10 rounded-md transform ">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">
             About Us
           </h1>
           <p className="text-base sm:text-lg group-hover:text-gray-200 transition duration-300 ease-in-out">
@@ -36,7 +36,7 @@ const About = () => {
               <li>Developing scalable solutions for future growth.</li>
               <li>Ensuring uncompromised security and privacy.</li>
             </ul>
-            <h3 className="text-lg sm:text-xl font-semibold mt-8">
+            <h3 className="text-lg sm:text-xl font-bold mt-8">
               Who We Are
             </h3>
             <ul className="space-y-3 list-disc list-inside mt-4">
