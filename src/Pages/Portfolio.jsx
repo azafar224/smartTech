@@ -23,7 +23,7 @@ const Portfolio = () => {
       {/* Scalable Solutions Section */}
       <div className="container mx-auto px-6 md:px-12 py-12 bg-black">
         <div>
-          <h2 className="text-6xl font-bold text-gray-900 text-white mb-8 text-center">
+          <h2 className="text-6xl font-bold text-white mb-8 text-center">
             Our Approach
           </h2>
           <div className="flex justify-center items-center mb-16">
