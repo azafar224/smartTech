@@ -324,7 +324,7 @@ function Contact() {
           </p>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-10">
         <iframe
           src="https://www.google.com/maps?q=Almas+Tower,+66,+Lake+Avenue+street,+Jumeirah+Lakes+Towers,+Al+Thanyah+5,+Hadaeq+Mohammed+Bin+Rashid,+Dubai,+Dubai+Municipality+12484+73843&output=embed"
           width="100%"
