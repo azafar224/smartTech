@@ -73,52 +73,100 @@ function Contact() {
   </div>
 </div>
 
-      {/* Contact Us Form and Details */}
-      <div className="bg-white py-8 sm:py-12 md:py-16">
-  <div className="container mx-auto px-0  sm:px-0 md:px-8 lg:px-15 grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 ">
+     {/* Contact Us Form and Details */}
+     <div
+  className="bg-white py-8 sm:py-12 md:py-16 border border-lime-300 rounded-[30px]"
+>
+  <div className="container mx-auto px-0 sm:px-0 md:px-8 lg:px-15 grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
     {/* Left Side: Contact Form */}
-    <div className="bg-blue-900 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg h-auto md:h-[660px] flex flex-col justify-between">
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-4">
+    <div className="bg-blue-900 p-4 sm:p-6 md:p-8 rounded-[30px] shadow-lg h-auto md:h-[660px] flex flex-col justify-between">
+      <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4">
         Contact Us
       </h2>
-      <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
-        Please complete the following form to ensure we can offer the best professional advice. One of our expert teams will get in touch with you.
+      <p className="text-sm sm:text-base text-white mb-4 sm:mb-6">
+        Please complete the following form to ensure we can offer the best
+        professional advice. One of our expert teams will get in touch with you.
       </p>
-      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-        <div className="mb-4 sm:mb-6">
+      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+        <div>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 sm:p-3 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Full Name"
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+            placeholder="Your Name"
             required
           />
         </div>
 
-        <div className="mb-4 sm:mb-6">
+        <div>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 sm:p-3 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
             placeholder="Email Address"
             required
           />
         </div>
 
-        <div className="mb-4 sm:mb-6">
+        <div>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+            placeholder="Company"
+          />
+        </div>
+
+        <div>
+          <select
+            id="services"
+            name="services"
+            value={formData.services}
+            onChange={handleChange}
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500"
+            required
+          >
+            <option value="">Services you are interested in</option>
+            <option value="service1">Web Development</option>
+            <option value="service2">Full Stack Development</option>
+            <option value="service3">Custom Software Development</option>
+            <option value="service1">Mobile Apps</option>
+            <option value="service2">QA Testing</option>
+            <option value="service3">IT Consultation</option>
+            <option value="service3">UI/UX Design</option>
+          </select>
+        </div>
+
+        <div>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-2 sm:p-3 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"
-            placeholder="Your Message"
+            className="w-full p-2 bg-white text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-yellow-500 resize-none"
+            placeholder="How can we help you?"
             rows="3"
             required
           />
@@ -126,13 +174,15 @@ function Contact() {
 
         <button
           type="submit"
-          className="w-full py-2 sm:py-3 bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2 sm:space-x-3 rounded-md"
+          className="w-full py-2 bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2 rounded-md"
         >
           <FaPaperPlane className="text-white" />
-          <span>Send Message</span>
+          <span>Send A Message</span>
         </button>
       </form>
     </div>
+  
+
 
     {/* Right Side: Contact Details */}
     <div className="space-y-4 sm:space-y-6 py-20 sm:py-16 md:py-40">
