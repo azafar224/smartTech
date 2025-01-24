@@ -39,7 +39,7 @@ const MobileAppDevelopmentPage = () => {
     Terraform: "/terraform.png",
     Ansible: "/ansible.png",
     CircleCI: "/circleci.png",
-    TravisCI: "/travis.png",
+    TravisCI: "/travisci.png",
     Nagios: "/nagios.png",
     Prometheus: "/prometheus.png",
     Grafana: "/grafana.png",
