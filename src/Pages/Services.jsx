@@ -96,72 +96,29 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Our Recent Reviews Section */}
-      <div className="bg-blue-800 text-white py-16 text-center">
-        <h2 className="text-3xl font-semibold text-white mb-7">Our Recent Reviews</h2>
-        <div className="flex flex-wrap justify-center gap-12 text-xl font-bold">
-          <div className="flex flex-col items-center">
-            <img
-              src="th.jpeg"
-              alt="logo"
-              className="h-12 w-12 mb-2"
-              style={{
-                width: "60%",
-                aspectRatio: "3/2",
-                objectFit: "contain",
-                mixBlendMode: "multiply",
-              }}
-            />
-            <h3 className="text-white">587+</h3>
-            <p className="text-white">Project Completed</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src="download.png"
-              alt="logo"
-              className="h-12 w-12 mb-2"
-              style={{
-                width: "60%",
-                aspectRatio: "3/2",
-                objectFit: "contain",
-                mixBlendMode: "multiply",
-              }}
-            />
-            <h3 className="text-white">264+</h3>
-            <p className="text-white">Client Satisfaction</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src="BC.png"
-              alt="logo"
-              className="h-12 w-12 mb-2"
-              style={{
-                width: "60%",
-                aspectRatio: "3/2",
-                objectFit: "contain",
-                mixBlendMode: "multiply",
-              }}
-            />
-            <h3 className="text-white">10+</h3>
-            <p className="text-white">Business Consultant</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src="ARWAD.jpeg"
-              alt="logo"
-              className="h-12 w-12 mb-2"
-              style={{
-                width: "60%",
-                aspectRatio: "3/2",
-                objectFit: "contain",
-                mixBlendMode: "multiply",
-              }}
-            />
-            <h3 className="text-white">5+</h3>
-            <p className="text-white">Award</p>
-          </div>
-        </div>
+     {/* Our Recent Reviews Section*/}
+<div className="bg-blue-800 text-white py-16 text-center">
+  <h2 className="text-3xl font-semibold text-white mb-7">Our Recent Reviews</h2>
+  <div className="max-w-5xl mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="PC.png" alt="logo" className="h-14 w-14 mx-auto mb-2" />
+        <h3 className="text-white">587+</h3>
+        <p className="text-white">Project Completed</p>
       </div>
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="CS.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
+        <h3 className="text-white">264+</h3>
+        <p className="text-white">Client Satisfaction</p>
+      </div>
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="BC.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
+        <h3 className="text-white">10+</h3>
+        <p className="text-white">Business Consultant</p>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Our Clients and Collaborative Partners Section */}
       <div className="bg-white py-16">
