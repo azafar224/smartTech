@@ -28,59 +28,10 @@ function Card({ logoUrl, title, date }) {
   );
 }
 // Carousel Component
-function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerPage = 3;
-  const totalCards = cardsData.length;
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalCards) % totalCards);
-  };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
-  };
+  
 
-  return (
-    <div className="bg-black p-8">
-      <div className="container mx-auto px-6 relative">
-        <h2 className="text-4xl font-semibold text-white text-center mb-12">Our Latest Updates</h2>
-
-        {/* Carousel Container */}
-        <div className="relative flex justify-center items-center">
-          {/* Left Button */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 p-4 bg-gray-600 text-white rounded-full transform -translate-y-1/2"
-          >
-            <FaArrowLeft />
-          </button>
-          {/* Cards Section */}
-          <div className="flex overflow-hidden">
-            {/* Cards displayed as a carousel */}
-            {cardsData.slice(currentIndex, currentIndex + cardsPerPage).map((card, index) => (
-              <div key={index} className="flex-shrink-0 sm:w-80 w-64 mx-3">
-                <Card 
-                  logoUrl={card.logoUrl}
-                  title={card.title}
-                  date={card.date}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Right Button */}
-          <button
-            onClick={handleNext}
-            className="absolute right-0 p-4 bg-gray-600 text-white rounded-full transform -translate-y-1/2"
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
 // ContactUs Component
 function Contact() {
   const [formData, setFormData] = useState({
@@ -319,7 +270,7 @@ function Contact() {
         <div>
           <h3 className="text-lg font-medium text-black">Dubai Office</h3>
           <p className="text-black text-sm sm:text-base">
-            Almas Tower, 66, Lake Avenue street, Jumeirah Lakes Towers, Al Thanyah 5, Hadaeq Mohammed Bin Rashid, Dubai, Dubai Municipality 12484 73843.
+          Almas Tower 66, Lake Avenue street,  37 Floor, Office G.
           </p>
         </div>
       </div>
@@ -342,14 +293,14 @@ function Contact() {
       <div className="flex items-center space-x-4">
         <FaMapMarkerAlt className="text-blue-900 text-xl sm:text-2xl" />
         <div>
-          <h3 className="text-lg font-medium text-black">Mexico Office</h3>
+          <h3 className="text-lg font-medium text-black">USA Office</h3>
           <p className="text-black text-sm sm:text-base">
           500 Marquette ave nw suite 1200 Albuquerque, New Mexico          </p>
         </div>
       </div>
       <div className="mt-10">
         <iframe
-src="https://www.google.com/maps?q=500+Marquette+Ave+NW+Suite+1200,+Albuquerque,+New+Mexico&output=embed"         
+  src="https://www.google.com/maps?q=500+Marquette+Ave+NW+Ste+1203,+Albuquerque,+NM+87102,+USA&output=embed"        
           width="100%"
           height="300"
           frameBorder="0"
@@ -362,33 +313,27 @@ src="https://www.google.com/maps?q=500+Marquette+Ave+NW+Suite+1200,+Albuquerque,
     </div>
   </div>
 </div>
-
-
-{/* Card Carousel Section */}
-<Carousel />
       {/* Our Recent Reviews Section*/}
-      <div className="bg-blue-800 text-white py-16 text-center">
+  {/* Our Recent Reviews Section*/}
+<div className="bg-blue-800 text-white py-16 text-center">
   <h2 className="text-3xl font-semibold text-white mb-7">Our Recent Reviews</h2>
-  <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xl font-bold">
-    <div className="hover:scale-110 transform transition duration-300">
-      <img src="th.jpeg" alt="logo" className="h-12 w-12 mx-auto mb-2" />
-      <h3 className="text-white">587+</h3>
-      <p className="text-white">Project Completed</p>
-    </div>
-    <div className="hover:scale-110 transform transition duration-300">
-      <img src="download.png" alt="logo" className="h-12 w-12 mx-auto mb-2" />
-      <h3 className="text-white">264+</h3>
-      <p className="text-white">Client Satisfaction</p>
-    </div>
-    <div className="hover:scale-110 transform transition duration-300">
-      <img src="BC.png" alt="logo" className="h-12 w-12 mx-auto mb-2" />
-      <h3 className="text-white">10+</h3>
-      <p className="text-white">Business Consultant</p>
-    </div>
-    <div className="hover:scale-110 transform transition duration-300">
-      <img src="ARWAD.jpeg" alt="logo" className="h-12 w-12 mx-auto mb-2" />
-      <h3 className="text-white">5+</h3>
-      <p className="text-white">Award</p>
+  <div className="max-w-5xl mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="PC.png" alt="logo" className="h-14 w-14 mx-auto mb-2" />
+        <h3 className="text-white">587+</h3>
+        <p className="text-white">Project Completed</p>
+      </div>
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="CS.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
+        <h3 className="text-white">264+</h3>
+        <p className="text-white">Client Satisfaction</p>
+      </div>
+      <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
+        <img src="BC.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
+        <h3 className="text-white">10+</h3>
+        <p className="text-white">Business Consultant</p>
+      </div>
     </div>
   </div>
 </div>
