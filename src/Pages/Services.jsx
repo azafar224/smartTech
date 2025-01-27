@@ -36,7 +36,7 @@ const Services = () => {
     {
       name: "Mobile App Development",
       description: "Develop mobile apps for Android and iOS.",
-      image: "/bg8.png",
+      image: "/mad.jpg",
       link: "/mobile-app-development",
     },
     {
