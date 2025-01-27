@@ -31,6 +31,7 @@ const Services = () => {
       name: "Data Analytics",
       description: "Analyze data and uncover actionable insights.",
       image: "/bg7.png",
+      link: "/data-analytics",
     },
     {
       name: "Mobile App Development",

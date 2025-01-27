@@ -176,9 +176,9 @@ const DataAnalyticsPage = () => {
         </p>
         <div className="relative flex justify-center mt-8">
           <img
-            src="/Data-Analytics-Process.png"
+            src="/Data-Analytics-Process1.png"
             alt="Development Process"
-            className="w-full max-w-5xl"
+            className="w-full max-w-4xl"
           />
         </div>
       </div>
