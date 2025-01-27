@@ -19,12 +19,7 @@ import PythonDevelopment from "./Pages/PythonDevelopment";
 import BlockchainDevelopment from "./Pages/BlockChainDevelopment";
 import CyberSecurity from "./Pages/CyberSecurity";
 import AIDevelopment from "./Pages/AIDevelopment";
-//  import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
-// import DataAnalytics from "./Pages/DataAnalytics";
-
 import DataAnalytics from "./Pages/DataAnalytics";
-
-// import CyberSecurity from "./Pages/CyberSecurity";
 import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
 
 const ScrollToTop = () => {
@@ -62,16 +57,9 @@ const App = () => {
               element={<BlockchainDevelopment />}
             />
             <Route path="/ai-development" element={<AIDevelopment />} />
-<<<<<<< HEAD
-            <Route path="/Cyber-Security" element={<CyberSecurity />} />
-=======
+            <Route path="/cyber-security" element={<CyberSecurity />} />
 
-            {/* <Route path="/data-analytics" element={<DataAnalytics />} /> */}
-
->>>>>>> e179194534f022ac0e3876abafc088bf9db5d1b1
             <Route path="/data-analytics" element={<DataAnalytics />} />
-
-            {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
             <Route
               path="/ecommerce-solutions"
               element={<EcommerceDevelopmentPage />}
