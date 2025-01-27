@@ -277,9 +277,9 @@ const Home = () => {
               </span>
             </div>
             <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-              <i className="fas fa-brain text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-                Artificial Intellegence Solutions
+              <i className="fas fa-brain text-blue-500 text-3xl mb-2 items-center justify-center transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 items-center justify-center group-hover:text-white transition-all duration-300 ease-in-out">
+                AI Solutions
               </span>
             </div>
           </div>
