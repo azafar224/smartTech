@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ServiceCard from "../Components/ServiceCard";
 import JobCard from "../Components/JobCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,50 +11,58 @@ const Home = () => {
   const handleButtonClick = (path) => {
     navigate(path);
   };
-
   const services = [
     {
       name: "Web Development",
+      description: "Build modern, responsive websites.",
       image: "/bg3.png",
-      description: "Build modern and responsive websites.",
+      link: "/web-development",
     },
     {
       name: "Python Development",
+      description: "Create robust backend applications with Python.",
       image: "/bg4.png",
-      description: "Powerful and versatile Python applications.",
+      link: "/python-development",
     },
     {
       name: "Blockchain Solution",
+      description: "Decentralized applications and blockchain solutions.",
       image: "/bg5.png",
-      description: "Decentralized solutions for your business.",
+      link: "/blockchain-development",
     },
     {
       name: "AI Development",
+      description: "Leverage AI to automate and enhance your business.",
       image: "/bg6.png",
-      description: "Artificial Intelligence to revolutionize industries.",
+      link: "/ai-development",
     },
     {
       name: "Data Analytics",
+      description: "Analyze data and uncover actionable insights.",
       image: "/bg7.png",
-      description: "Analyze and gain insights from your data.",
+      link: "/data-analytics",
     },
     {
       name: "Mobile App Development",
-      image: "/bg8.png",
-      description: "Create seamless mobile experiences.",
+      description: "Develop mobile apps for Android and iOS.",
+      image: "/mad.jpg",
+      link: "/mobile-app-development",
     },
     {
       name: "E-Commerce Solution",
+      description: "Build scalable e-commerce platforms.",
       image: "/bg9.png",
-      description: "Build robust e-commerce platforms.",
+      link: "/ecommerce-solutions",
     },
     {
-      name: "Cybersecurity",
+      name: "Cyber Security",
+      description: "Ensure security for your systems and data.",
       image: "/bg10.png",
-      description: "Protect your business with top-notch security.",
+      link: "/cyber-security",
     },
+    
   ];
-
+  
   const jobs = [
     {
       title: "Software Engineer",
@@ -287,109 +296,124 @@ const Home = () => {
       </div>
 
       {/* Scrollable Service Cards Section */}
-      {/* Scrollable Service Cards Section */}
       <div className="py-12 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Our Expert Services
-            </h2>
-            <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-              Discover the range of services we offer to take your business to
-              the next level.
-            </p>
-          </div>
-          <div className="relative">
-            {/* Left Arrow Button */}
-            <button
-              onClick={() => {
-                const slider = sliderRef.current;
-                if (slider) {
-                  const cardWidth = 300;
-                  const currentScroll = slider.scrollLeft;
-                  const totalScroll = slider.scrollWidth;
+  <div className="container mx-auto px-6 md:px-12">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+        Our Expert Services
+      </h2>
+      <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+        Discover the range of services we offer to take your business to
+        the next level.
+      </p>
+    </div>
+    <div className="relative">
+      {/* Left Arrow Button */}
+      <button
+        onClick={() => {
+          const slider = sliderRef.current;
+          if (slider) {
+            const cardWidth = 300;
+            const currentScroll = slider.scrollLeft;
+            const totalScroll = slider.scrollWidth;
 
-                  slider.scrollTo({
-                    left: currentScroll - cardWidth,
-                    behavior: "smooth",
-                  });
+            slider.scrollTo({
+              left: currentScroll - cardWidth,
+              behavior: "smooth",
+            });
 
-                  // If we're at the start, jump to the second set without animation
-                  if (currentScroll < cardWidth) {
-                    requestAnimationFrame(() => {
-                      slider.style.scrollBehavior = "auto";
-                      slider.scrollLeft =
-                        totalScroll - cardWidth * services.length * 2;
-                      slider.style.scrollBehavior = "smooth";
-                    });
-                  }
-                }
-              }}
-              className="arrow-button left-arrow"
-            >
-              &lt;
-            </button>
+            // If we're at the start, jump to the second set without animation
+            if (currentScroll < cardWidth) {
+              requestAnimationFrame(() => {
+                slider.style.scrollBehavior = "auto";
+                slider.scrollLeft =
+                  totalScroll - cardWidth * services.length * 2;
+                slider.style.scrollBehavior = "smooth";
+              });
+            }
+          }
+        }}
+        className="arrow-button left-arrow"
+      >
+        &lt;
+      </button>
 
-            {/* Scrollable Services Container */}
-            <div
-              className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
-              ref={sliderRef}
-              style={{
-                msOverflowStyle: "none",
-                scrollbarWidth: "none",
-              }}
-            >
-              {/* Quintuple the items for smoother infinite scroll */}
-              {[
-                ...services,
-                ...services,
-                ...services,
-                ...services,
-                ...services,
-              ].map((service, index) => (
-                <ServiceCard
-                  key={`${index}`}
-                  service={service}
-                  className="flex-shrink-0"
-                  style={{
-                    width: "90%",
-                    maxWidth: "300px",
-                  }}
-                />
-              ))}
+     {/* Scrollable Services Container */}
+     <div
+        className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
+        ref={sliderRef}
+        style={{
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+        }}
+      >
+        {[...services, ...services, ...services, ...services, ...services].map((service, index) => (
+          <div
+            key={index}
+            className="relative w-full h-[395px] flex-shrink-0 overflow-hidden rounded-lg shadow-md group mx-auto"
+            style={{
+              width: "90%",
+              maxWidth: "300px",
+            }}
+            onClick={() => handleButtonClick(service.link)}
+          >
+            <img
+              src={service.image}
+              alt={service.name}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+              <h3 className="text-white text-lg sm:text-xl font-semibold">
+                {service.name}
+              </h3>
             </div>
-
-            {/* Right Arrow Button */}
-            <button
-              onClick={() => {
-                const slider = sliderRef.current;
-                if (slider) {
-                  const cardWidth = 300;
-                  const currentScroll = slider.scrollLeft;
-                  const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-                  slider.scrollTo({
-                    left: currentScroll + cardWidth,
-                    behavior: "smooth",
-                  });
-
-                  // If we're near the end, jump to the second set without animation
-                  if (currentScroll > maxScroll - cardWidth * 2) {
-                    requestAnimationFrame(() => {
-                      slider.style.scrollBehavior = "auto";
-                      slider.scrollLeft = cardWidth * services.length;
-                      slider.style.scrollBehavior = "smooth";
-                    });
-                  }
-                }
-              }}
-              className="arrow-button right-arrow"
-            >
-              &gt;
-            </button>
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <h3 className="text-white text-lg sm:text-2xl font-semibold mb-4">
+                {service.name}
+              </h3>
+              <p className="text-white text-xs sm:text-sm mb-4 text-center px-4">
+                {service.description}
+              </p>
+              <button className="text-white text-3xl sm:text-4xl font-bold bg-gray-900 p-3 sm:p-4 rounded-full shadow-md hover:bg-gray-800 transition duration-300">
+                &rarr;
+              </button>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
+
+      {/* Right Arrow Button */}
+      <button
+        onClick={() => {
+          const slider = sliderRef.current;
+          if (slider) {
+            const cardWidth = 300;
+            const currentScroll = slider.scrollLeft;
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+            slider.scrollTo({
+              left: currentScroll + cardWidth,
+              behavior: "smooth",
+            });
+
+            // If we're near the end, jump to the second set without animation
+            if (currentScroll > maxScroll - cardWidth * 2) {
+              requestAnimationFrame(() => {
+                slider.style.scrollBehavior = "auto";
+                slider.scrollLeft = cardWidth * services.length;
+                slider.style.scrollBehavior = "smooth";
+              });
+            }
+          }
+        }}
+        className="arrow-button right-arrow"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+
 
       <div className="py-12 bg-white container mx-auto px-6 md:px-12">
         {/* Section Title */}
