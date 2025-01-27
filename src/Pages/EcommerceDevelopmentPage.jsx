@@ -1,6 +1,7 @@
 import React from "react";
 import TechSlider from "./../Components/TechSlider";
 import { Link } from "react-router-dom";
+
 const EcommerceDevelopmentPage = () => {
   const techIcons = {
     // Frontend Icons for E-commerce
@@ -41,7 +42,7 @@ const EcommerceDevelopmentPage = () => {
     Cloudflare: "/cloudfare.png",
     Docker: "/docker.png",
     Kubernetes: "/kubernetes.png",
-    Jenkins: "/jenkins.png"
+    Jenkins: "/jenkins.png",
   };
 
   const frontendTech = [
@@ -50,7 +51,7 @@ const EcommerceDevelopmentPage = () => {
     "Vue",
     "Angular",
     "TypeScript",
-    "TailwindCSS"
+    "TailwindCSS",
   ];
 
   const backendTech = [
@@ -61,7 +62,7 @@ const EcommerceDevelopmentPage = () => {
     "Magento",
     "Shopify",
     "WooCommerce",
-    "PrestaShop"
+    "PrestaShop",
   ];
 
   const databaseTech = [
@@ -69,16 +70,10 @@ const EcommerceDevelopmentPage = () => {
     "MySQL",
     "PostgreSQL",
     "Redis",
-    "Elasticsearch"
+    "Elasticsearch",
   ];
 
-  const paymentTech = [
-    "Stripe",
-    "PayPal",
-    "SSL",
-    "OAuth",
-    "JWT"
-  ];
+  const paymentTech = ["Stripe", "PayPal", "SSL", "OAuth", "JWT"];
 
   const devOpsTech = [
     "AWS",
@@ -86,7 +81,7 @@ const EcommerceDevelopmentPage = () => {
     "Cloudflare",
     "Docker",
     "Kubernetes",
-    "Jenkins"
+    "Jenkins",
   ];
 
   return (
@@ -106,10 +101,12 @@ const EcommerceDevelopmentPage = () => {
               </h2>
             </div>
             <p className="text-lg text-gray-300 leading-relaxed">
-              We build powerful e-commerce solutions that transform your business vision into reality. 
-              From custom storefronts to integrated payment systems, we deliver secure, 
-              scalable, and user-friendly platforms that maximize your online revenue. 
-              Our expert team ensures your e-commerce presence stands out in the digital marketplace.
+              We build powerful e-commerce solutions that transform your
+              business vision into reality. From custom storefronts to
+              integrated payment systems, we deliver secure, scalable, and
+              user-friendly platforms that maximize your online revenue. Our
+              expert team ensures your e-commerce presence stands out in the
+              digital marketplace.
             </p>
             <Link to="/contact">
               <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
@@ -155,7 +152,9 @@ const EcommerceDevelopmentPage = () => {
 
         {/* Backend */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">E-commerce Platforms & Backend</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            E-commerce Platforms & Backend
+          </h2>
           <TechSlider
             technologies={backendTech}
             icons={techIcons}
@@ -165,7 +164,9 @@ const EcommerceDevelopmentPage = () => {
 
         {/* Database & Cache */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">Database & Search Solutions</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            Database & Search Solutions
+          </h2>
           <TechSlider
             technologies={databaseTech}
             icons={techIcons}
@@ -175,7 +176,9 @@ const EcommerceDevelopmentPage = () => {
 
         {/* Payment & Security */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">Payment & Security</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            Payment & Security
+          </h2>
           <TechSlider
             technologies={paymentTech}
             icons={techIcons}
@@ -185,7 +188,9 @@ const EcommerceDevelopmentPage = () => {
 
         {/* DevOps */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">DevOps & Analytics</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            DevOps & Analytics
+          </h2>
           <TechSlider
             technologies={devOpsTech}
             icons={techIcons}
@@ -201,10 +206,12 @@ const EcommerceDevelopmentPage = () => {
           <h3 className="text-4xl font-semibold">Our Development Process?</h3>
         </div>
         <p className="text-center text-gray-300 leading-relaxed max-w-4xl mx-auto">
-          Our e-commerce development process is designed to create robust, secure, and scalable online stores. 
-          We begin with thorough market analysis and requirement gathering, followed by UX/UI design, 
-          development, payment integration, security implementation, and thorough testing. 
-          Our approach ensures your e-commerce platform is optimized for conversions and ready for growth.
+          Our e-commerce development process is designed to create robust,
+          secure, and scalable online stores. We begin with thorough market
+          analysis and requirement gathering, followed by UX/UI design,
+          development, payment integration, security implementation, and
+          thorough testing. Our approach ensures your e-commerce platform is
+          optimized for conversions and ready for growth.
         </p>
         <div className="relative flex justify-center mt-8">
           <img

@@ -7,7 +7,7 @@ const Services = () => {
       name: "Web Development",
       description: "Build modern, responsive websites.",
       image: "/bg3.png",
-      link: "/web-development", // Link for the Web Development page
+      link: "/web-development",
     },
     {
       name: "Python Development",
