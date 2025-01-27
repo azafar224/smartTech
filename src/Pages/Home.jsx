@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ServiceCard from "../Components/ServiceCard";
@@ -247,43 +246,43 @@ const Home = () => {
 
           {/* Left Section: Technologies Grid */}
           <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 px-6 mb-9  lg:mb-0">
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-0 px-9 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-globe text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      Website Development
-    </span>
-  </div>
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-mobile-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      Mobile App Development
-    </span>
-  </div>
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-chart-line text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      Data Analysis 
-    </span>
-  </div>
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-shield-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      Cyber
-    </span>
-  </div>
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-shopping-cart text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      E-commerce
-    </span>
-  </div>
-  <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
-    <i className="fas fa-brain text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
-    <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
-      Artificial Intellegence Solution
-    </span>
-  </div>
-</div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-0 px-9 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-globe text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                Website Development
+              </span>
+            </div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-mobile-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                Mobile App Development
+              </span>
+            </div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-chart-line text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                Data Analysis
+              </span>
+            </div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-shield-alt text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                Cyber Security
+              </span>
+            </div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-shopping-cart text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                E-Commerce Solutions
+              </span>
+            </div>
+            <div className="tech-item flex flex-col items-center justify-center bg-gray-100 rounded-lg py-6 px-4 shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out hover:shadow-lg group">
+              <i className="fas fa-brain text-blue-500 text-3xl mb-2 transition-all duration-300 ease-in-out group-hover:text-white"></i>
+              <span className="text-lg font-medium text-gray-700 group-hover:text-white transition-all duration-300 ease-in-out">
+                Artificial Intellegence Solutions
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -300,88 +299,95 @@ const Home = () => {
               the next level.
             </p>
           </div>
-<div className="relative">
-  {/* Left Arrow Button */}
-  <button
-    onClick={() => {
-      const slider = sliderRef.current;
-      if (slider) {
-        const cardWidth = 300;
-        const currentScroll = slider.scrollLeft;
-        const totalScroll = slider.scrollWidth;
-        
-        slider.scrollTo({
-          left: currentScroll - cardWidth,
-          behavior: 'smooth'
-        });
+          <div className="relative">
+            {/* Left Arrow Button */}
+            <button
+              onClick={() => {
+                const slider = sliderRef.current;
+                if (slider) {
+                  const cardWidth = 300;
+                  const currentScroll = slider.scrollLeft;
+                  const totalScroll = slider.scrollWidth;
 
-        // If we're at the start, jump to the second set without animation
-        if (currentScroll < cardWidth) {
-          requestAnimationFrame(() => {
-            slider.style.scrollBehavior = 'auto';
-            slider.scrollLeft = totalScroll - (cardWidth * services.length * 2);
-            slider.style.scrollBehavior = 'smooth';
-          });
-        }
-      }
-    }}
-    className="arrow-button left-arrow"
-  >
-    &lt;
-  </button>
+                  slider.scrollTo({
+                    left: currentScroll - cardWidth,
+                    behavior: "smooth",
+                  });
 
-  {/* Scrollable Services Container */}
-  <div
-    className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
-    ref={sliderRef}
-    style={{
-      msOverflowStyle: "none",
-      scrollbarWidth: "none",
-    }}
-  >
-    {/* Quintuple the items for smoother infinite scroll */}
-    {[...services, ...services, ...services, ...services, ...services].map((service, index) => (
-      <ServiceCard
-        key={`${index}`}
-        service={service}
-        className="flex-shrink-0"
-        style={{
-          width: "90%",
-          maxWidth: "300px",
-        }}
-      />
-    ))}
-  </div>
+                  // If we're at the start, jump to the second set without animation
+                  if (currentScroll < cardWidth) {
+                    requestAnimationFrame(() => {
+                      slider.style.scrollBehavior = "auto";
+                      slider.scrollLeft =
+                        totalScroll - cardWidth * services.length * 2;
+                      slider.style.scrollBehavior = "smooth";
+                    });
+                  }
+                }
+              }}
+              className="arrow-button left-arrow"
+            >
+              &lt;
+            </button>
 
-  {/* Right Arrow Button */}
-  <button
-    onClick={() => {
-      const slider = sliderRef.current;
-      if (slider) {
-        const cardWidth = 300;
-        const currentScroll = slider.scrollLeft;
-        const maxScroll = slider.scrollWidth - slider.clientWidth;
-        
-        slider.scrollTo({
-          left: currentScroll + cardWidth,
-          behavior: 'smooth'
-        });
+            {/* Scrollable Services Container */}
+            <div
+              className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
+              ref={sliderRef}
+              style={{
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
+              {/* Quintuple the items for smoother infinite scroll */}
+              {[
+                ...services,
+                ...services,
+                ...services,
+                ...services,
+                ...services,
+              ].map((service, index) => (
+                <ServiceCard
+                  key={`${index}`}
+                  service={service}
+                  className="flex-shrink-0"
+                  style={{
+                    width: "90%",
+                    maxWidth: "300px",
+                  }}
+                />
+              ))}
+            </div>
 
-        // If we're near the end, jump to the second set without animation
-        if (currentScroll > maxScroll - cardWidth * 2) {
-          requestAnimationFrame(() => {
-            slider.style.scrollBehavior = 'auto';
-            slider.scrollLeft = cardWidth * services.length;
-            slider.style.scrollBehavior = 'smooth';
-          });
-        }
-      }
-    }}
-    className="arrow-button right-arrow"
-  >
-    &gt;
-  </button>
-</div>
+            {/* Right Arrow Button */}
+            <button
+              onClick={() => {
+                const slider = sliderRef.current;
+                if (slider) {
+                  const cardWidth = 300;
+                  const currentScroll = slider.scrollLeft;
+                  const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+                  slider.scrollTo({
+                    left: currentScroll + cardWidth,
+                    behavior: "smooth",
+                  });
+
+                  // If we're near the end, jump to the second set without animation
+                  if (currentScroll > maxScroll - cardWidth * 2) {
+                    requestAnimationFrame(() => {
+                      slider.style.scrollBehavior = "auto";
+                      slider.scrollLeft = cardWidth * services.length;
+                      slider.style.scrollBehavior = "smooth";
+                    });
+                  }
+                }
+              }}
+              className="arrow-button right-arrow"
+            >
+              &gt;
+            </button>
+          </div>
         </div>
       </div>
 
@@ -583,156 +589,160 @@ const Home = () => {
         {/* Testimonial Cards Grid */}
 
         <div
-  className="testimonial-scroll-container overflow-hidden relative w-full"
-  ref={testimonialsRef}
-  onMouseEnter={() => setIsPaused(true)} // Stops on hover
-  onMouseLeave={() => setIsPaused(false)} // Resumes on mouse leave
->
-  <div
-    className={`scroll-animation flex space-x-12 ${
-      isPaused ? "" : "animate-scroll"
-    }`}
-    onAnimationIteration={() => testimonialsRef.current.scrollTo(0, 0)} // Restart when animation iteration ends
-    style={{
-      animationDuration: "280s", // Slow transition speed
-    }} 
- >
-    {[...Array(3)].map((_, index) => (
-      <React.Fragment key={index}>
-            {/* Testimonial 1 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 1"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "This product has completely transformed the way we work. We
-                couldn't be happier with the results!"
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">John Doe</h3>
-              <p className="text-gray-600">CEO, CompanyName</p>
-            </div>
+          className="testimonial-scroll-container overflow-hidden relative w-full"
+          ref={testimonialsRef}
+          onMouseEnter={() => setIsPaused(true)} // Stops on hover
+          onMouseLeave={() => setIsPaused(false)} // Resumes on mouse leave
+        >
+          <div
+            className={`scroll-animation flex space-x-12 ${
+              isPaused ? "" : "animate-scroll"
+            }`}
+            onAnimationIteration={() => testimonialsRef.current.scrollTo(0, 0)} // Restart when animation iteration ends
+            style={{
+              animationDuration: "280s", // Slow transition speed
+            }}
+          >
+            {[...Array(3)].map((_, index) => (
+              <React.Fragment key={index}>
+                {/* Testimonial 1 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 1"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "This product has completely transformed the way we work. We
+                    couldn't be happier with the results!"
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    John Doe
+                  </h3>
+                  <p className="text-gray-600">CEO, CompanyName</p>
+                </div>
 
-            {/* Testimonial 2 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 2"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "Excellent customer service and great value. We've seen a
-                dramatic improvement in our business."
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Jane Smith
-              </h3>
-              <p className="text-gray-600">
-                Marketing Director, AnotherCompany
-              </p>
-            </div>
+                {/* Testimonial 2 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 2"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "Excellent customer service and great value. We've seen a
+                    dramatic improvement in our business."
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Jane Smith
+                  </h3>
+                  <p className="text-gray-600">
+                    Marketing Director, AnotherCompany
+                  </p>
+                </div>
 
-            {/* Testimonial 3 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 3"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "The best investment we've made in a long time. The results
-                speak for themselves."
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Samuel Lee
-              </h3>
-              <p className="text-gray-600">Product Manager, TechCorp</p>
-            </div>
+                {/* Testimonial 3 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 3"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "The best investment we've made in a long time. The results
+                    speak for themselves."
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Samuel Lee
+                  </h3>
+                  <p className="text-gray-600">Product Manager, TechCorp</p>
+                </div>
 
-            {/* Testimonial 4 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 4"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "I was amazed at how easy it was to integrate this product into
-                our workflow. Highly recommended!"
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Lisa Brown
-              </h3>
-              <p className="text-gray-600">Operations Manager, BusinessCo</p>
-            </div>
+                {/* Testimonial 4 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 4"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "I was amazed at how easy it was to integrate this product
+                    into our workflow. Highly recommended!"
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Lisa Brown
+                  </h3>
+                  <p className="text-gray-600">
+                    Operations Manager, BusinessCo
+                  </p>
+                </div>
 
-            {/* Testimonial 5 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 5"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "Our team can't stop talking about how great this product is.
-                It's been a game changer for us."
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Michael Johnson
-              </h3>
-              <p className="text-gray-600">CTO, Innovate Inc.</p>
-            </div>
+                {/* Testimonial 5 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 5"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "Our team can't stop talking about how great this product
+                    is. It's been a game changer for us."
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Michael Johnson
+                  </h3>
+                  <p className="text-gray-600">CTO, Innovate Inc.</p>
+                </div>
 
-            {/* Testimonial 6 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 6"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "This product has exceeded our expectations. The quality and
-                performance are top-notch."
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Emily Wilson
-              </h3>
-              <p className="text-gray-600">Founder, StartupX</p>
-            </div>
+                {/* Testimonial 6 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 6"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "This product has exceeded our expectations. The quality and
+                    performance are top-notch."
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Emily Wilson
+                  </h3>
+                  <p className="text-gray-600">Founder, StartupX</p>
+                </div>
 
-            {/* Testimonial 7 */}
-            <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
-              <div className="flex justify-center mb-4">
-                <img
-                  src="/w.png" // Replace with actual path to image
-                  alt="Profile 7"
-                  className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
-                />
-              </div>
-              <p className="text-lg font-medium text-gray-800 mb-4">
-                "Absolutely fantastic! This has streamlined our operations and
-                increased productivity."
-              </p>
-              <h3 className="text-xl font-semibold text-gray-800">
-                Chris Taylor
-              </h3>
-              <p className="text-gray-600">VP, Global Corp</p>
-            </div>
-            </React.Fragment>
-    ))}
+                {/* Testimonial 7 */}
+                <div className="bg-white p-8 shadow-xl rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl w-full sm:w-[calc(50%_-_1rem)] md:w-[calc(33.333%_-_1rem)] lg:w-[calc(25%_-_0.5rem)] xl:w-[calc(20%_-_0.5rem)]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src="/w.png" // Replace with actual path to image
+                      alt="Profile 7"
+                      className="w-24 h-24 object-cover rounded-full border-4 border-blue-500"
+                    />
+                  </div>
+                  <p className="text-lg font-medium text-gray-800 mb-4">
+                    "Absolutely fantastic! This has streamlined our operations
+                    and increased productivity."
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Chris Taylor
+                  </h3>
+                  <p className="text-gray-600">VP, Global Corp</p>
+                </div>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>

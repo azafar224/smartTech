@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -15,10 +15,10 @@ import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
 import WebDevelopment from "./Pages/WebDevelopment";
 import MobileAppDevelopment from "./Pages/MobileAppDevelopment";
-import PythonDevelopment from "./Pages/pythonDevelopment";
+import PythonDevelopment from "./Pages/PythonDevelopment";
 import BlockchainDevelopment from "./Pages/BlockChainDevelopment";
 import AIDevelopment from "./Pages/AIDevelopment";
-// import DataAnalytics from "./Pages/DataAnalytics";
+import DataAnalytics from "./Pages/DataAnalytics";
 // import CyberSecurity from "./Pages/CyberSecurity";
 // import EcommerceSolutions from "./Pages/EcommerceSolutions";
 
@@ -57,7 +57,7 @@ const App = () => {
               element={<BlockchainDevelopment />}
             />
             <Route path="/ai-development" element={<AIDevelopment />} />
-            {/* <Route path="/data-analytics" element={<DataAnalytics />} /> */}
+            <Route path="/data-analytics" element={<DataAnalytics />} />
             {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
             {/* <Route
               path="/ecommerce-solutions"
