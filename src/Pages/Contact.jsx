@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import {
   FaRegCalendarAlt,
-  FaArrowLeft,
-  FaArrowRight,
   FaPaperPlane,
   FaPhoneAlt,
   FaEnvelope,
@@ -17,43 +16,18 @@ import {
   FaStar,
 } from "react-icons/fa";
 
-// Sample card data
-const cardsData = [
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "January 12, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "January 15, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "January 20, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "February 12, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "February 15, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "February 20, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "March 12, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "March 15, 2024" },
-  { logoUrl: "w.png", title: "Verniçe Realé", date: "March 20, 2024" },
-];
-
-// Card Component
-function Card({ logoUrl, title, date }) {
-  return (
-    <div className="bg-[#EAEAEA] p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-      <img src={logoUrl} alt="logo" className="h-20 w-20 mx-auto mb-4" />
-      <h3 className="text-xl font-semibold text-black text-center mb-2">
-        {title}
-      </h3>
-      <div className="flex items-center justify-center space-x-2 text-gray-600">
-        <FaRegCalendarAlt />
-        <span>{date}</span>
-      </div>
-    </div>
-  );
-}
-// Carousel Component
-
-// ContactUs Component
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    company: "",
+    services: "",
     message: "",
   });
+
+  const [isSending, setIsSending] = useState(false); // To show loading state
+  const [successMessage, setSuccessMessage] = useState(""); // For success feedback
 
   const handleChange = (e) => {
     setFormData({
@@ -64,8 +38,33 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here
+    setIsSending(true);
+
+    // Email.js Configuration
+    const serviceId = "service_ft18x6c";
+    const templateId = "template_tvnvlyt";
+    const publicKey = "xNz9rg_Sjd3KQ1SCQ";
+
+    emailjs.send(serviceId, templateId, formData, publicKey).then(
+      (response) => {
+        console.log("Email sent successfully:", response);
+        setSuccessMessage("Your message was sent successfully!");
+        setIsSending(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          services: "",
+          message: "",
+        });
+      },
+      (error) => {
+        console.error("Failed to send email:", error);
+        setSuccessMessage("Failed to send your message. Please try again.");
+        setIsSending(false);
+      }
+    );
   };
 
   return (
@@ -85,7 +84,7 @@ function Contact() {
         </div>
       </div>
 
-      {/* Contact Us Form and Details */}
+      {/* Contact Form */}
       <div className="bg-white py-8 sm:py-12 md:py-16 border border-lime-300 rounded-[30px]">
         <div className="container mx-auto px-0 sm:px-0 md:px-8 lg:px-15 grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
           {/* Left Side: Contact Form */}
@@ -160,13 +159,22 @@ function Contact() {
                   required
                 >
                   <option value="">Services you are interested in</option>
-                  <option value="service1">Web Development</option>
-                  <option value="service2">Full Stack Development</option>
-                  <option value="service3">Custom Software Development</option>
-                  <option value="service1">Mobile Apps</option>
-                  <option value="service2">QA Testing</option>
-                  <option value="service3">IT Consultation</option>
-                  <option value="service3">UI/UX Design</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile Application Development">
+                    Mobile Application Development
+                  </option>
+                  <option value="Python Development">Python Development</option>
+                  <option value="Artificial Intelligence Development">
+                    Artificial Intelligence Development
+                  </option>
+                  <option value="Block Chain Development">
+                    Block Chain Development
+                  </option>
+                  <option value="Cyber Security">Cyber Security</option>
+                  <option value="Data Analysis">Data Analysis</option>
+                  <option value="E-Commerce Solutions">
+                    E-Commerce Solutions
+                  </option>
                 </select>
               </div>
 
@@ -185,14 +193,27 @@ function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-2 bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2 rounded-md"
+                className={`w-full py-2 ${
+                  isSending ? "bg-gray-500 cursor-not-allowed" : "bg-blue-600"
+                } text-white hover:bg-blue-700 flex items-center justify-center space-x-2 rounded-md`}
+                disabled={isSending}
               >
                 <FaPaperPlane className="text-white" />
-                <span>Send A Message</span>
+                <span>{isSending ? "Sending..." : "Send A Message"}</span>
               </button>
             </form>
+            {successMessage && (
+              <p
+                className={`text-center mt-4 ${
+                  successMessage.includes("successfully")
+                    ? "text-green-500"
+                    : "text-red-500"
+                }`}
+              >
+                {successMessage}
+              </p>
+            )}
           </div>
-
           {/* Right Side: Contact Details */}
           <div className="space-y-4 sm:space-y-6 py-20 sm:py-16 md:py-40">
             <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold mb-4 text-black ">
@@ -337,9 +358,10 @@ function Contact() {
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-blue-900 text-xl sm:text-2xl" />
               <div>
-                <h3 className="text-lg font-medium text-black">Dubai Office</h3>
+                <h3 className="text-lg font-medium text-black">UAE Office</h3>
                 <p className="text-black text-sm sm:text-base">
-                  Almas Tower 66, Lake Avenue street, 37 Floor, Office G.
+                  Almas Tower 66, Lake Avenue street, 37 Floor, Office G, Dubai,
+                  UAE.
                 </p>
               </div>
             </div>
@@ -364,7 +386,7 @@ function Contact() {
               <div>
                 <h3 className="text-lg font-medium text-black">USA Office</h3>
                 <p className="text-black text-sm sm:text-base">
-                  500 Marquette ave nw suite 1200 Albuquerque, New Mexico{" "}
+                  500 Marquette Ave NW Ste 1203, Albuquerque, NM 87102, USA
                 </p>
               </div>
             </div>
@@ -383,7 +405,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      {/* Our Recent Reviews Section*/}
       {/* Our Recent Reviews Section*/}
       <div className="bg-blue-800 text-white py-16 text-center">
         <h2 className="text-3xl font-semibold text-white mb-7">
