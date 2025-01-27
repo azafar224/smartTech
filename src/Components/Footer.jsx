@@ -109,7 +109,7 @@ const Navigation = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/services"
+                  to="/web-development"
                   className="text-gray-400 text-base hover:text-white"
                 >
                   Web Development
@@ -117,50 +117,58 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/mobile-app-development"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  Full Stack Development
+                  Mobile Application Development
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/blockchain-development"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  Custom Software Development
+                  BlockChain Solution
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/ai-development"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  Mobile Apps
+                  Artificial Intelligence Solution
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/data-analytics"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  QA Testing
+                  Data Analytics
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/python-development"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  IT Consultation
+                  Python Development
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/ecommerce-solutions"
                   className="text-gray-400 text-base hover:text-white"
                 >
-                  UI/UX Design
+                  E-Commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cyber-security"
+                  className="text-gray-400 text-base hover:text-white"
+                >
+                  Cyber Security Solutions
                 </Link>
               </li>
             </ul>
