@@ -1,5 +1,6 @@
 import React from "react";
 import TechSlider from "./../Components/TechSlider";
+import { Link } from "react-router-dom";
 
 const AIDevelopmentPage = () => {
   const techIcons = {
@@ -109,10 +110,12 @@ const AIDevelopmentPage = () => {
               allows us to create advanced AI applications that align with your
               business goals.
             </p>
-            <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
-              START YOUR JOURNEY
-              <span>→</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                START YOUR JOURNEY
+                <span>→</span>
+              </button>
+            </Link>
           </div>
 
           {/* Right Illustration */}

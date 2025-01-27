@@ -1,5 +1,6 @@
 import React from "react";
 import TechSlider from "./../Components/TechSlider";
+import { Link } from "react-router-dom";
 
 const DataAnalyticsPage = () => {
   const techIcons = {
@@ -77,10 +78,12 @@ const DataAnalyticsPage = () => {
               scalable analytics systems that help businesses make informed
               decisions.
             </p>
-            <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
-              START YOUR JOURNEY
-              <span>→</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                START YOUR JOURNEY
+                <span>→</span>
+              </button>
+            </Link>
           </div>
 
           {/* Right Illustration */}
@@ -176,9 +179,9 @@ const DataAnalyticsPage = () => {
         </p>
         <div className="relative flex justify-center mt-8">
           <img
-            src="/Data-Analytics-Process.png"
+            src="/Data-Analytics-Process1.png"
             alt="Development Process"
-            className="w-full max-w-5xl"
+            className="w-full max-w-4xl"
           />
         </div>
       </div>

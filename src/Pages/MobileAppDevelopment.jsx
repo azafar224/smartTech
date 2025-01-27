@@ -1,5 +1,6 @@
 import React from "react";
 import TechSlider from "./../Components/TechSlider";
+import { Link } from "react-router-dom";
 
 const MobileAppDevelopmentPage = () => {
   const techIcons = {
@@ -112,10 +113,12 @@ const MobileAppDevelopmentPage = () => {
               enhance your business. Our team of experts leverages cutting-edge
               tools and frameworks to bring your ideas to life.
             </p>
-            <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
-              START YOUR JOURNEY
-              <span>→</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                START YOUR JOURNEY
+                <span>→</span>
+              </button>
+            </Link>
           </div>
 
           {/* Right Illustration */}

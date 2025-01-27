@@ -7,7 +7,7 @@ const Services = () => {
       name: "Web Development",
       description: "Build modern, responsive websites.",
       image: "/bg3.png",
-      link: "/web-development", // Link for the Web Development page
+      link: "/web-development",
     },
     {
       name: "Python Development",
@@ -31,17 +31,19 @@ const Services = () => {
       name: "Data Analytics",
       description: "Analyze data and uncover actionable insights.",
       image: "/bg7.png",
+      link: "/data-analytics",
     },
     {
       name: "Mobile App Development",
       description: "Develop mobile apps for Android and iOS.",
-      image: "/bg8.png",
+      image: "/mad.jpg",
       link: "/mobile-app-development",
     },
     {
       name: "E-Commerce Solution",
       description: "Build scalable e-commerce platforms.",
       image: "/bg9.png",
+      link: "/ecommerce-solutions",
     },
     {
       name: "Cyber Security",
