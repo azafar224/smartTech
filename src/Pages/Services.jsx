@@ -42,6 +42,7 @@ const Services = () => {
       name: "E-Commerce Solution",
       description: "Build scalable e-commerce platforms.",
       image: "/bg9.png",
+      link: "/EcommerceDevelopmentPage",
     },
     {
       name: "Cyber Security",

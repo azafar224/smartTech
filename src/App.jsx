@@ -18,6 +18,7 @@ import MobileAppDevelopment from "./Pages/MobileAppDevelopment";
 import PythonDevelopment from "./Pages/pythonDevelopment";
 import BlockchainDevelopment from "./Pages/BlockChainDevelopment";
 import AIDevelopment from "./Pages/AIDevelopment";
+import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
 // import DataAnalytics from "./Pages/DataAnalytics";
 // import CyberSecurity from "./Pages/CyberSecurity";
 // import EcommerceSolutions from "./Pages/EcommerceSolutions";
@@ -57,6 +58,10 @@ const App = () => {
               element={<BlockchainDevelopment />}
             />
             <Route path="/ai-development" element={<AIDevelopment />} />
+            <Route
+              path="/EcommerceDevelopmentPage"
+              element={<EcommerceDevelopmentPage />}
+            />
             {/* <Route path="/data-analytics" element={<DataAnalytics />} /> */}
             {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
             {/* <Route
