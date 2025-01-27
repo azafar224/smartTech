@@ -414,18 +414,18 @@ function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
               <img src="PC.png" alt="logo" className="h-14 w-14 mx-auto mb-2" />
-              <h3 className="text-white">587+</h3>
+              <h3 className="text-white">500+</h3>
               <p className="text-white">Project Completed</p>
             </div>
             <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
               <img src="CS.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
-              <h3 className="text-white">264+</h3>
+              <h3 className="text-white">90%</h3>
               <p className="text-white">Client Satisfaction</p>
             </div>
             <div className="hover:scale-110 transform transition duration-300 w-full max-w-xs">
               <img src="BC.png" alt="logo" className="h-16 w-16 mx-auto mb-2" />
-              <h3 className="text-white">10+</h3>
-              <p className="text-white">Business Consultant</p>
+              <h3 className="text-white">50+</h3>
+              <p className="text-white">Technical Collaborations</p>
             </div>
           </div>
         </div>

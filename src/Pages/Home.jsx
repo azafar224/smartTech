@@ -60,9 +60,8 @@ const Home = () => {
       image: "/bg10.png",
       link: "/cyber-security",
     },
-    
   ];
-  
+
   const jobs = [
     {
       title: "Software Engineer",
@@ -193,27 +192,19 @@ const Home = () => {
           <div className="flex flex-wrap justify-evenly gap-y-6 sm:gap-y-0 w-full">
             <div className="flex flex-col items-center space-y-2 hover:scale-105 transform transition duration-300 ease-in-out w-[40%] sm:w-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                125K+
+                1000+
               </h2>
               <p className="text-xs sm:text-sm text-gray-600">Happy Clients</p>
             </div>
             <div className="flex flex-col items-center space-y-2 hover:scale-105 transform transition duration-300 ease-in-out w-[40%] sm:w-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                825M+
+                50+
               </h2>
               <p className="text-xs sm:text-sm text-gray-600">Technology</p>
             </div>
             <div className="flex flex-col items-center space-y-2 hover:scale-105 transform transition duration-300 ease-in-out w-[40%] sm:w-auto">
               <h2 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                0.25%
-              </h2>
-              <p className="text-xs sm:text-sm text-gray-600">
-                Fraud Probability
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-2 hover:scale-105 transform transition duration-300 ease-in-out w-[40%] sm:w-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold text-blue-600">
-                125M+
+                5000+
               </h2>
               <p className="text-xs sm:text-sm text-gray-600">
                 Total Customers
@@ -297,123 +288,128 @@ const Home = () => {
 
       {/* Scrollable Service Cards Section */}
       <div className="py-12 bg-white">
-  <div className="container mx-auto px-6 md:px-12">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-        Our Expert Services
-      </h2>
-      <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-        Discover the range of services we offer to take your business to
-        the next level.
-      </p>
-    </div>
-    <div className="relative">
-      {/* Left Arrow Button */}
-      <button
-        onClick={() => {
-          const slider = sliderRef.current;
-          if (slider) {
-            const cardWidth = 300;
-            const currentScroll = slider.scrollLeft;
-            const totalScroll = slider.scrollWidth;
-
-            slider.scrollTo({
-              left: currentScroll - cardWidth,
-              behavior: "smooth",
-            });
-
-            // If we're at the start, jump to the second set without animation
-            if (currentScroll < cardWidth) {
-              requestAnimationFrame(() => {
-                slider.style.scrollBehavior = "auto";
-                slider.scrollLeft =
-                  totalScroll - cardWidth * services.length * 2;
-                slider.style.scrollBehavior = "smooth";
-              });
-            }
-          }
-        }}
-        className="arrow-button left-arrow"
-      >
-        &lt;
-      </button>
-
-     {/* Scrollable Services Container */}
-     <div
-        className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
-        ref={sliderRef}
-        style={{
-          msOverflowStyle: "none",
-          scrollbarWidth: "none",
-        }}
-      >
-        {[...services, ...services, ...services, ...services, ...services].map((service, index) => (
-          <div
-            key={index}
-            className="relative w-full h-[395px] flex-shrink-0 overflow-hidden rounded-lg shadow-md group mx-auto"
-            style={{
-              width: "90%",
-              maxWidth: "300px",
-            }}
-            onClick={() => handleButtonClick(service.link)}
-          >
-            <img
-              src={service.image}
-              alt={service.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-              <h3 className="text-white text-lg sm:text-xl font-semibold">
-                {service.name}
-              </h3>
-            </div>
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-white text-lg sm:text-2xl font-semibold mb-4">
-                {service.name}
-              </h3>
-              <p className="text-white text-xs sm:text-sm mb-4 text-center px-4">
-                {service.description}
-              </p>
-              <button className="text-white text-3xl sm:text-4xl font-bold bg-gray-900 p-3 sm:p-4 rounded-full shadow-md hover:bg-gray-800 transition duration-300">
-                &rarr;
-              </button>
-            </div>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Our Expert Services
+            </h2>
+            <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+              Discover the range of services we offer to take your business to
+              the next level.
+            </p>
           </div>
-        ))}
+          <div className="relative">
+            {/* Left Arrow Button */}
+            <button
+              onClick={() => {
+                const slider = sliderRef.current;
+                if (slider) {
+                  const cardWidth = 300;
+                  const currentScroll = slider.scrollLeft;
+                  const totalScroll = slider.scrollWidth;
+
+                  slider.scrollTo({
+                    left: currentScroll - cardWidth,
+                    behavior: "smooth",
+                  });
+
+                  // If we're at the start, jump to the second set without animation
+                  if (currentScroll < cardWidth) {
+                    requestAnimationFrame(() => {
+                      slider.style.scrollBehavior = "auto";
+                      slider.scrollLeft =
+                        totalScroll - cardWidth * services.length * 2;
+                      slider.style.scrollBehavior = "smooth";
+                    });
+                  }
+                }
+              }}
+              className="arrow-button left-arrow"
+            >
+              &lt;
+            </button>
+
+            {/* Scrollable Services Container */}
+            <div
+              className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hidden"
+              ref={sliderRef}
+              style={{
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
+              {[
+                ...services,
+                ...services,
+                ...services,
+                ...services,
+                ...services,
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="relative w-full h-[395px] flex-shrink-0 overflow-hidden rounded-lg shadow-md group mx-auto"
+                  style={{
+                    width: "90%",
+                    maxWidth: "300px",
+                  }}
+                  onClick={() => handleButtonClick(service.link)}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <h3 className="text-white text-lg sm:text-xl font-semibold">
+                      {service.name}
+                    </h3>
+                  </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <h3 className="text-white text-lg sm:text-2xl font-semibold mb-4">
+                      {service.name}
+                    </h3>
+                    <p className="text-white text-xs sm:text-sm mb-4 text-center px-4">
+                      {service.description}
+                    </p>
+                    <button className="text-white text-3xl sm:text-4xl font-bold bg-gray-900 p-3 sm:p-4 rounded-full shadow-md hover:bg-gray-800 transition duration-300">
+                      &rarr;
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Arrow Button */}
+            <button
+              onClick={() => {
+                const slider = sliderRef.current;
+                if (slider) {
+                  const cardWidth = 300;
+                  const currentScroll = slider.scrollLeft;
+                  const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+                  slider.scrollTo({
+                    left: currentScroll + cardWidth,
+                    behavior: "smooth",
+                  });
+
+                  // If we're near the end, jump to the second set without animation
+                  if (currentScroll > maxScroll - cardWidth * 2) {
+                    requestAnimationFrame(() => {
+                      slider.style.scrollBehavior = "auto";
+                      slider.scrollLeft = cardWidth * services.length;
+                      slider.style.scrollBehavior = "smooth";
+                    });
+                  }
+                }
+              }}
+              className="arrow-button right-arrow"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
       </div>
-
-      {/* Right Arrow Button */}
-      <button
-        onClick={() => {
-          const slider = sliderRef.current;
-          if (slider) {
-            const cardWidth = 300;
-            const currentScroll = slider.scrollLeft;
-            const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-            slider.scrollTo({
-              left: currentScroll + cardWidth,
-              behavior: "smooth",
-            });
-
-            // If we're near the end, jump to the second set without animation
-            if (currentScroll > maxScroll - cardWidth * 2) {
-              requestAnimationFrame(() => {
-                slider.style.scrollBehavior = "auto";
-                slider.scrollLeft = cardWidth * services.length;
-                slider.style.scrollBehavior = "smooth";
-              });
-            }
-          }
-        }}
-        className="arrow-button right-arrow"
-      >
-        &gt;
-      </button>
-    </div>
-  </div>
-</div>
-
 
       <div className="py-12 bg-white container mx-auto px-6 md:px-12">
         {/* Section Title */}

@@ -33,18 +33,19 @@ const Navigation = () => {
               </div>
               <div>
                 <h4 className="text-base md:text-lg font-semibold mb-3">
-                  US Office
+                  USA Office
                 </h4>
                 <p className="text-gray-400 text-base hover:text-gray-300">
-                  500 Marquette Ave NW Ste 1203, Albuquerque, NM 87102, USA
+                  500 Marquette Ave NW Ste 1203, Albuquerque, NM 87102, USA
                 </p>
               </div>
               <div>
                 <h4 className="text-base md:text-lg font-semibold mb-3">
-                  Dubai Office
+                  UAE Office
                 </h4>
                 <p className="text-gray-400 text-base hover:text-gray-300">
-                  Almas Tower 66, Lake Avenue street, 37 Floor, Office G
+                  Almas Tower 66, Lake Avenue street, 37 Floor, Office G, Dubai,
+                  UAE.
                 </p>
               </div>
             </div>

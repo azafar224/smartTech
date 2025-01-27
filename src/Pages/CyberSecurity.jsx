@@ -1,5 +1,6 @@
 import React from "react";
 import TechSlider from "./../Components/TechSlider";
+import { Link } from "react-router-dom";
 
 const CyberSecurity = () => {
   const techIcons = {
@@ -68,7 +69,14 @@ const CyberSecurity = () => {
     "Auth0",
   ];
 
-  const tools = ["Burpsuite", "Nessus", "Metasploit", "Snort", "QualysGuard", "Splunk"];
+  const tools = [
+    "Burpsuite",
+    "Nessus",
+    "Metasploit",
+    "Snort",
+    "QualysGuard",
+    "Splunk",
+  ];
 
   const cloudPlatforms = [
     "Tenable",
@@ -89,21 +97,24 @@ const CyberSecurity = () => {
             <div className="space-y-2">
               <h1 className="text-5xl font-bold">ADVANCED PROTECTION</h1>
               <h2 className="text-4xl font-bold">
-              SECURING YOUR DIGITAL
+                SECURING YOUR DIGITAL
                 <br />
                 ASSETS AND FUTURE
               </h2>
             </div>
             <p className="text-lg text-gray-300 leading-relaxed">
-            Our Company provides comprehensive cybersecurity services to protect your 
-              organization from evolving threats. From network security to threat detection, 
-              we implement robust security measures using cutting-edge technologies to ensure 
-              your business stays protected in today's digital landscape.
+              Our Company provides comprehensive cybersecurity services to
+              protect your organization from evolving threats. From network
+              security to threat detection, we implement robust security
+              measures using cutting-edge technologies to ensure your business
+              stays protected in today's digital landscape.
             </p>
-            <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
-              START YOUR JOURNEY
-              <span>→</span>
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                START YOUR JOURNEY
+                <span>→</span>
+              </button>
+            </Link>
           </div>
 
           {/* Right Illustration */}
@@ -130,7 +141,9 @@ const CyberSecurity = () => {
               SECURITY SOLUTIONS AND TECHNOLOGIES
             </span>
           </div>
-          <h2 className="text-3xl font-semibold text-center">Network Security</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            Network Security
+          </h2>
           <TechSlider
             technologies={aiFrameworks}
             icons={techIcons}
@@ -152,7 +165,9 @@ const CyberSecurity = () => {
 
         {/* Data Handling */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">Identify & Access Management</h2>
+          <h2 className="text-3xl font-semibold text-center">
+            Identify & Access Management
+          </h2>
           <TechSlider
             technologies={dataHandling}
             icons={techIcons}
@@ -190,10 +205,11 @@ const CyberSecurity = () => {
           <h3 className="text-4xl font-semibold">Our Security Process?</h3>
         </div>
         <p className="text-center text-gray-300 leading-relaxed max-w-4xl mx-auto">
-        Our comprehensive security approach follows industry best practices. We work 
-           closely with you to assess vulnerabilities, implement robust security measures, 
-          and maintain continuous monitoring. From initial assessment to ongoing protection, 
-          we ensure your organization stays secure against emerging threats.
+          Our comprehensive security approach follows industry best practices.
+          We work closely with you to assess vulnerabilities, implement robust
+          security measures, and maintain continuous monitoring. From initial
+          assessment to ongoing protection, we ensure your organization stays
+          secure against emerging threats.
         </p>
         <div className="relative flex justify-center mt-8">
           <img
@@ -208,5 +224,3 @@ const CyberSecurity = () => {
 };
 
 export default CyberSecurity;
-
-
