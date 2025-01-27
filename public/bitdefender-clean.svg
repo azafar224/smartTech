@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Shield Shape -->
+  <path d="M50 10 L85 30 L85 65 C85 80 50 90 50 90 C50 90 15 80 15 65 L15 30 Z" 
+        fill="#ed1c24"/>
+  <!-- Inner Shield -->
+  <path d="M50 25 L75 40 L75 60 C75 70 50 80 50 80 C50 80 25 70 25 60 L25 40 Z" 
+        fill="white"/>
+  <!-- Wolf Head Silhouette -->
+  <path d="M40 45 L50 35 L60 45 L50 60 Z" 
+        fill="#ed1c24"/>
+  <circle cx="45" cy="42" r="2" fill="#ed1c24"/>
+  <circle cx="55" cy="42" r="2" fill="#ed1c24"/>
+</svg>

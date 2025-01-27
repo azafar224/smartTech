@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect x="10" y="10" width="80" height="80" fill="#006d5c"/>
+  <!-- Grid Pattern -->
+  <path d="M30 30 L70 30 M30 50 L70 50 M30 70 L70 70
+           M30 30 L30 70 M50 30 L50 70 M70 30 L70 70" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        opacity="0.3"/>
+  <!-- K Design -->
+  <path d="M35 25 L35 75 M35 50 L65 25 M35 50 L65 75" 
+        stroke="white" 
+        stroke-width="6" 
+        stroke-linecap="round"/>
+</svg>

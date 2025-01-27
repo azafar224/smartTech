@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Main Triangle -->
+  <path d="M20 80 L50 20 L80 80 Z" fill="#4a4a4a"/>
+  <!-- Inner Triangle -->
+  <path d="M35 60 L50 30 L65 60 Z" fill="#ff4444"/>
+</svg>

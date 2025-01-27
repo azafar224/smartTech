@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Main Circle -->
+  <circle cx="50" cy="50" r="40" fill="#00afd7"/>
+  <!-- Wave Pattern -->
+  <path d="M25 50 Q50 20 75 50 Q50 80 25 50" 
+        fill="white" 
+        stroke="none"/>
+  <!-- Center Dot -->
+  <circle cx="50" cy="50" r="5" fill="#00afd7"/>
+</svg>

@@ -47,6 +47,7 @@ const Services = () => {
       name: "Cyber Security",
       description: "Ensure security for your systems and data.",
       image: "/bg10.png",
+      link: "/Cyber-Security",
     },
   ];
 

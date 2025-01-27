@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Main Shield -->
+  <path d="M50 10 L85 30 L85 65 C85 80 50 90 50 90 C50 90 15 80 15 65 L15 30 Z" 
+        fill="#c01818"/>
+  <!-- Inner Shield -->
+  <path d="M50 20 L75 35 L75 60 C75 70 50 80 50 80 C50 80 25 70 25 60 L25 35 Z" 
+        fill="#ffffff" 
+        fill-opacity="0.2"/>
+  <!-- M Design -->
+  <path d="M35 40 L50 70 L65 40" 
+        fill="none"
+        stroke="white" 
+        stroke-width="6" 
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

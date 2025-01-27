@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Square Background -->
+  <rect x="15" y="15" width="70" height="70" fill="#84b135"/>
+  <!-- Cross Pattern -->
+  <path d="M30 30 L70 70 M70 30 L30 70" 
+        stroke="white" stroke-width="8" 
+        stroke-linecap="round"/>
+</svg>

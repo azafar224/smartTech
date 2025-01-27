@@ -17,6 +17,7 @@ import WebDevelopment from "./Pages/WebDevelopment";
 import MobileAppDevelopment from "./Pages/MobileAppDevelopment";
 import PythonDevelopment from "./Pages/PythonDevelopment";
 import BlockchainDevelopment from "./Pages/BlockChainDevelopment";
+import CyberSecurity from "./Pages/CyberSecurity";
 import AIDevelopment from "./Pages/AIDevelopment";
 import DataAnalytics from "./Pages/DataAnalytics";
 // import CyberSecurity from "./Pages/CyberSecurity";
@@ -57,6 +58,7 @@ const App = () => {
               element={<BlockchainDevelopment />}
             />
             <Route path="/ai-development" element={<AIDevelopment />} />
+            <Route path="/Cyber-Security" element={<CyberSecurity />} />
             <Route path="/data-analytics" element={<DataAnalytics />} />
             {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
             {/* <Route

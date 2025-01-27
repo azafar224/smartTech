@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect x="10" y="10" width="80" height="80" rx="20" fill="#0066b3"/>
+  <!-- S Curve -->
+  <path d="M30 35 C40 35 70 35 70 50 C70 65 30 65 30 50 C30 35 60 35 70 50" 
+        fill="none"
+        stroke="white" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+  <!-- Protection Rings -->
+  <circle cx="50" cy="50" r="35" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="2" 
+          opacity="0.3"/>
+</svg>

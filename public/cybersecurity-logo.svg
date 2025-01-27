@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Shield -->
+  <path d="M100 10 L180 50 V110 C180 150 100 190 100 190 C100 190 20 150 20 110 V50 L100 10Z" 
+        fill="#1a1f3c" stroke="#3b82f6" stroke-width="4"/>
+  
+  <!-- Lock Body -->
+  <rect x="70" y="80" width="60" height="50" rx="10" 
+        fill="#3b82f6"/>
+  
+  <!-- Lock Shackle -->
+  <path d="M85 80 V60 C85 45 115 45 115 60 V80" 
+        fill="none" stroke="#3b82f6" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Circuit Lines -->
+  <path d="M40 70 L60 70 M140 70 L160 70 M100 140 L100 160" 
+        stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="100" cy="105" r="15" 
+          fill="#1a1f3c" stroke="#3b82f6" stroke-width="4"/>
+  
+  <!-- Glow Effect -->
+  <circle cx="100" cy="105" r="8" 
+          fill="#60a5fa" opacity="0.5">
+    <animate attributeName="opacity" 
+             values="0.5;0.8;0.5" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </circle>
+</svg>
