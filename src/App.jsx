@@ -18,14 +18,13 @@ import MobileAppDevelopment from "./Pages/MobileAppDevelopment";
 import PythonDevelopment from "./Pages/PythonDevelopment";
 import BlockchainDevelopment from "./Pages/BlockChainDevelopment";
 import AIDevelopment from "./Pages/AIDevelopment";
-<<<<<<< HEAD
-import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
+//  import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
 // import DataAnalytics from "./Pages/DataAnalytics";
-=======
+
 import DataAnalytics from "./Pages/DataAnalytics";
->>>>>>> 3dbc31fd5a7c46ff9ea943dfc0366389a6adc1fd
+
 // import CyberSecurity from "./Pages/CyberSecurity";
-// import EcommerceSolutions from "./Pages/EcommerceSolutions";
+import EcommerceDevelopmentPage from "./Pages/EcommerceDevelopmentPage";
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -62,20 +61,16 @@ const App = () => {
               element={<BlockchainDevelopment />}
             />
             <Route path="/ai-development" element={<AIDevelopment />} />
-<<<<<<< HEAD
+
+            {/* <Route path="/data-analytics" element={<DataAnalytics />} /> */}
+
+            <Route path="/data-analytics" element={<DataAnalytics />} />
+
+            {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
             <Route
-              path="/EcommerceDevelopmentPage"
+              path="/ecommerce-solutions"
               element={<EcommerceDevelopmentPage />}
             />
-            {/* <Route path="/data-analytics" element={<DataAnalytics />} /> */}
-=======
-            <Route path="/data-analytics" element={<DataAnalytics />} />
->>>>>>> 3dbc31fd5a7c46ff9ea943dfc0366389a6adc1fd
-            {/* <Route path="/cyber-security" element={<CyberSecurity />} /> */}
-            {/* <Route
-              path="/ecommerce-solutions"
-              element={<EcommerceSolutions />}
-            /> */}
           </Routes>
         </main>
         <Footer />
