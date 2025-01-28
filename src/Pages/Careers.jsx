@@ -68,47 +68,12 @@ const Careers = () => {
             >
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-xl font-bold">{job.title}</h3>
-                <span className="text-gray-400 text-sm">25 August 2025</span>
+                <span className="text-gray-400 text-sm"></span>
               </div>
               <p className="text-gray-400">{job.description}</p>
             </div>
           ))}
         </div>
-
-        {/* Pagination */}
-        {/* <div className="text-center mt-12">
-          <ul
-            className="flex justify-center space-x-4"
-            role="navigation"
-            aria-label="Pagination"
-          >
-            <li>
-              <button
-                className="w-3 h-3 rounded-full bg-blue-600"
-                aria-label="Page 1"
-                aria-current="true"
-              ></button>
-            </li>
-            <li>
-              <button
-                className="w-3 h-3 rounded-full bg-gray-400"
-                aria-label="Page 2"
-              ></button>
-            </li>
-            <li>
-              <button
-                className="w-3 h-3 rounded-full bg-gray-400"
-                aria-label="Page 3"
-              ></button>
-            </li>
-            <li>
-              <button
-                className="w-3 h-3 rounded-full bg-gray-400"
-                aria-label="Page 4"
-              ></button>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </section>
   );
