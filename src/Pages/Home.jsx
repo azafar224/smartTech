@@ -225,13 +225,13 @@ const Home = () => {
         <div className=" absolute inset-0 bg-black opacity-50"></div>
 
         {/* Content Container */}
-        <div className="relative z-10 flex flex-col lg:flex-row justify-center items-center h-full w-full px-3 pb-1 lg:pb-0">
+        <div className="relative z-10 flex flex-col lg:flex-row justify-center items-center h-full w-full px-12 pb-1 lg:pb-0">
           {/* Right Section: Text with Heading, Blue Line, and Bullets */}
           <div className=" lg:pt-3 pt-16 w-full lg:w-1/2 text-white text-center lg:text-left px-6 lg:order-first">
             <h2 className="sm:pt-30 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ">
               Where Bold Ideas <br /> Find Their Code
             </h2>
-            <div className="mb-4 border-t-4 border-blue-500 w-24 mx-auto lg:mx-0"></div>
+            <div className="mb-4 border-t-4 border-blue-500 w-24 mx-auto lg:text-left lg:mx-0"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
               <ul className="space-y-2">
                 <li>● Your Vision, Our Mission</li>
